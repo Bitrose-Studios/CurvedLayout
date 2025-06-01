@@ -1,6 +1,6 @@
 # Curved Panel – Advanced UMG Layout Plugin for Unreal Engine
 
-**Author:** Peter Gyarmati ([@mrgyarmati](https://twitter.com/mrgyarmati))  
+**Author:** Peter Gyarmati ([@BitroseStudios](https://x.com/bitrosestudios))  
 **Version:** 1.0  
 **Engine Compatibility:** Unreal Engine 4.27+
 
@@ -98,8 +98,9 @@ All settings are available in the UMG Details panel when selecting a `CurvedLayo
 
 ## 💬 Support & Feedback
 
-- Twitter/X: [@mrgyarmati](https://twitter.com/mrgyarmati)
-- GitHub or Fab Marketplace issue page (coming soon)
+- Twitter/X: [@BitroseStudios](https://x.com/bitrosestudios)
+- GitHub issue page : [https://github.com/mrgyarmati/CurvedLayout/issues](https://github.com/mrgyarmati/CurvedLayout/issues)
+
 
 ---
 
