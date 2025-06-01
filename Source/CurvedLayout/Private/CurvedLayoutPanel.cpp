@@ -38,6 +38,27 @@ TSharedRef<SWidget> UCurvedLayoutPanel::RebuildWidget()
 		if (UWidget* Widget = PanelSlot->Content)
 		{
 			MyPanel->AddSlot(Widget->TakeWidget());
+
+			for (int32 i = 0; i < Slots.Num(); ++i)
+			{
+				UWidget* slotContent = Slots[i]->Content;
+
+				// Calculate the angle for this slot and apply it to the widget
+				// This helps with the rotation of the widget content to upward facing
+				float AngleStep = (EndAngle - StartAngle) / Slots.Num();
+				float ComputedAngle = StartAngle + i * AngleStep;
+				float FinalComputedAngle = bRotateTowards ? ComputedAngle + 180 + RotateOffset - 90.f : ComputedAngle;
+				if (UUserWidget* UserWidget = Cast<UUserWidget>(slotContent))
+				{
+					float SlotRotation = FinalComputedAngle;
+					UProperty* RotationProp = UserWidget->GetClass()->FindPropertyByName(FName("SlotRotationAngle"));
+					if (RotationProp && RotationProp->IsA<FFloatProperty>())
+					{
+						FFloatProperty* FloatProp = CastField<FFloatProperty>(RotationProp);
+						FloatProp->SetPropertyValue_InContainer(UserWidget, SlotRotation);
+					}
+				}
+			}
 		}
 	}
 

@@ -1,9 +1,9 @@
 {
 	"FileVersion": 3,
 	"Version": 1,
-	"VersionName": "1.0",
+	"VersionName": "1.0.1",
 	"FriendlyName": "CurvedLayout",
-	"Description": "",
+	"Description": "A UMG layout panel for Unreal Engine that arranges widgets in radial or curved formations with curve, alignment, and rotation support.",
 	"Category": "UI",
 	"CreatedBy": "Peter Gyarmati",
 	"CreatedByURL": "",
