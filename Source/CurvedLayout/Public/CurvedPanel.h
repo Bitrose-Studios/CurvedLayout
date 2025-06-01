@@ -2,6 +2,7 @@
 
 #pragma once
 #include "CoreMinimal.h"
+#include "UserWidget.h"
 #include "Widgets/SPanel.h"
 
 /**
@@ -186,7 +187,7 @@ public:
 			FVector2D WidgetPos = Pos - Size * 0.5f;
 
 			// Optionally rotate to face outward along the curve
-			float RotationDeg = bRotateTowards ? (AngleDeg + RotateOffset - 90.f) : RotateOffset;
+			float RotationDeg = bRotateTowards ? (AngleDeg + 180 + RotateOffset - 90.f) : RotateOffset;
 			FSlateRenderTransform SlateRenderTransform(FQuat2D(FMath::DegreesToRadians(RotationDeg)));
 
 			// Create layout geometry for the widget
